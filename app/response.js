@@ -4,13 +4,10 @@ const response = (statusCode, body) => ({
 })
 
 const success = callback => body =>
-  callback(null, response(200, JSON.stringify(body)))
+  callback(null, response(200, JSON.stringify(body, null, 2)))
 
-// There is no error code because it's not integrated
-// with API gateway yet
 const badRequest = callback => body =>
-  callback(JSON.stringify(body))
-
+  callback(null, response(400, JSON.stringify(body, null, 2)))
 
 module.exports = function makeResponse (callback) {
   return {

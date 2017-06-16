@@ -5,11 +5,11 @@
     "lint": "eslint app/"
   },
   "dependencies": {
+    "ajv": "^5.1.6",
     "eslint": "^4.0.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.3.0",
     "jest": "^20.0.4",
-    "joi": "^10.6.0",
     "ramda": "^0.24.1"
   }
 }

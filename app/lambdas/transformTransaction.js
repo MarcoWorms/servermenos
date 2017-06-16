@@ -4,10 +4,11 @@ const vtexTransaction = require('../schemas/vtexTransaction')
 function transformTransaction (event, context, callback) {
   const response = makeResponse(callback)
 
-  response.success({
-    message: 'Go Serverless v1.0! Your function executed successfully!',
-    event,
-  })
+  const transaction = event.body
+
+  // pagarmeTransaction = pagarmeSpec(transaction)
+
+  response.success({ transaction })
 }
 
 module.exports = {

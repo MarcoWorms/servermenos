@@ -9,5 +9,5 @@ functions:
     handler: app.transformTransaction
     events:
       - http:
-          path: transformTransaction
-          method: get
+          path: payments
+          method: post

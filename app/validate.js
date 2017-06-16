@@ -1,15 +1,21 @@
-const Joi = require('joi')
+const Ajv = require('ajv')
+
+const ajv = new Ajv()
+ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-04.json'))
+
 const { map } = require('ramda')
 const makeResponse = require('./response')
+
 
 module.exports = map(handler => (event, context, callback) => {
   const response = makeResponse(callback)
 
-  const validation = Joi.validate(event.body, handler.inputSchema)
+  const validate = ajv.compile(handler.inputSchema)
+  const valid = validate(event.body)
 
-  if (validation.error === null) {
-    return handler.handle(event, context, callback)
+  if (!valid) {
+    return response.badRequest(validate.errors)
   }
 
-  return response.badRequest(validation)
+  return handler.handle(event, context, callback)
 })
