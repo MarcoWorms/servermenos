@@ -2,13 +2,14 @@
   "scripts": {
     "start": "serverless deploy",
     "test": "jest",
-    "lint": "eslint src/"
+    "lint": "eslint app/"
   },
   "dependencies": {
     "eslint": "^4.0.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.3.0",
     "jest": "^20.0.4",
+    "joi": "^10.6.0",
     "ramda": "^0.24.1"
   }
 }

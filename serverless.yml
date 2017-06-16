@@ -5,9 +5,9 @@ provider:
   runtime: nodejs6.10
 
 functions:
-  hello:
-    handler: src/handlers.hello
+  transformTransaction:
+    handler: app.transformTransaction
     events:
       - http:
-          path: hello
+          path: transformTransaction
           method: get
