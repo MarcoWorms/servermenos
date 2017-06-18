@@ -5,8 +5,8 @@ provider:
   runtime: nodejs6.10
 
 functions:
-  transformTransaction:
-    handler: app.transformTransaction
+  payments:
+    handler: app.payments
     events:
       - http:
           path: payments

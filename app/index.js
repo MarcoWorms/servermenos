@@ -1,9 +1,9 @@
-const addValidation = require('./validate')
+const addValidations = require('./validate')
 
-const transformTransaction = require('./lambdas/transformTransaction')
+const payments = require('./lambdas/payments')
 
 const lambdas = {
-  transformTransaction,
+  payments,
 }
 
-module.exports = addValidation(lambdas)
+module.exports = addValidations(lambdas)
