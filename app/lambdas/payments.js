@@ -20,8 +20,6 @@ function transformTransaction (event, context, callback) {
     acquirer: 'Cielo',
     nsu: 'Nsu1234',
     tid: 'Tid1234',
-    code: '200',
-    message: 'Custom message from provider',
     bankIssueInvoiceUrl: 'https://processor/bankinvoice.pdf/null',
   })
 }
