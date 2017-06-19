@@ -1,6 +1,7 @@
 const makeResponse = require('../response')
 const schema = require('../schemas/vtexTransaction')
 
+
 function transformTransaction (event, context, callback) {
   const response = makeResponse(callback)
 

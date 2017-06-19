@@ -1,6 +1,6 @@
 const addValidations = require('./validate')
 
-const payments = require('./lambdas/payments')
+const payments = require('./payments')
 
 const lambdas = {
   payments,
