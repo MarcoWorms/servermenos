@@ -184,7 +184,7 @@ module.exports = {
             },
             "discount":  {
               "type": "number"
-            }  
+            }
           }
         },
         "shippingValue" : {
